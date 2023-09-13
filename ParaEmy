@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta de Casamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quer casar comigo?</h1>
+    <button id="naoButton">Não</button>
+    <button id="simButton" style="display: none;">Sim</button>
+    <p id="mensagem" style="display: none;">Então estamos casados :)</p>
+
+    <script>
+        const naoButton = document.getElementById("naoButton");
+        const simButton = document.getElementById("simButton");
+        const mensagem = document.getElementById("mensagem");
+
+        naoButton.addEventListener("click", () => {
+            naoButton.style.display = "none";
+            simButton.style.display = "block";
+            mensagem.style.display = "none";
+        });
+
+        simButton.addEventListener("click", () => {
+            mensagem.style.display = "block";
+        });
+    </script>
+</body>
+</html>
